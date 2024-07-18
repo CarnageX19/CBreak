@@ -1,0 +1,3 @@
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/hello_world.dir
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/rebuild_cache.dir
