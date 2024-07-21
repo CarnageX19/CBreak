@@ -14,4 +14,12 @@ function(print var) # function (<function name> <variable name>)
     endforeach()
 endfunction()
 
+#macro is similar to inline function
+macro(macro_name)
+endmacro()
+
+#environment variable example
+message("$ENV{ENV_VAR}")
+
+
 print(PROJECT_NAME MYVAR ANOTHER_VARIABLE) #function call
