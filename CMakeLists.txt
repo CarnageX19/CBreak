@@ -10,6 +10,8 @@ set(MYVAR "A NEW VARIABLE")
 function(print var) # function (<function name> <variable name>)
     message("${ARGN}") #It is a special Dereferencing operator used to print all the arguments passed to function except the first one(the variable name not the actual value)
     message("${ARGC}") #prints the number of arguments
+    message("${ARGV0}") #prints the first variable
+    message("${ARGV1}") #prints the second variable
 endfunction()
 
 print(PROJECT_NAME MYVAR) #function call
