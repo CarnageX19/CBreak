@@ -5,9 +5,11 @@ add_executable(${PROJECT_NAME} main.cpp) #thus if we want to make executable nam
 #to declare a function you use the function keyword and type the name of the function inside the ()
 #and you also use a endfunction() keyword
 
+set(MYVAR "A NEW VARIABLE")
+
 function(print var) # function (<function name> <variable name>)
-    message("${var}") #this only prints the variable name
-    message("${${var}}") #this prints the value of the var
+    message("${ARGN}") #It is a special Dereferencing operator used to print all the arguments passed to function except the first one(the variable name not the actual value)
+    message("${ARGC}") #prints the number of arguments
 endfunction()
 
-print(PROJECT_NAME) #function call
+print(PROJECT_NAME MYVAR) #function call
