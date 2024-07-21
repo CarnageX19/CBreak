@@ -6,12 +6,12 @@ add_executable(${PROJECT_NAME} main.cpp) #thus if we want to make executable nam
 #and you also use a endfunction() keyword
 
 set(MYVAR "A NEW VARIABLE")
+set(ANOTHER_VARIABLE "THIS IS AN OTHER VARIABLE")
 
 function(print var) # function (<function name> <variable name>)
-    message("${ARGN}") #It is a special Dereferencing operator used to print all the arguments passed to function except the first one(the variable name not the actual value)
-    message("${ARGC}") #prints the number of arguments
-    message("${ARGV0}") #prints the first variable
-    message("${ARGV1}") #prints the second variable
+    foreach(var ${ARGN}) #similar to for(auto it: some_set)
+        message("${var} = ${${var}}") #foreach demo
+    endforeach()
 endfunction()
 
-print(PROJECT_NAME MYVAR) #function call
+print(PROJECT_NAME MYVAR ANOTHER_VARIABLE) #function call
