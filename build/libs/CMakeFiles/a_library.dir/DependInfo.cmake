@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/guddu/OneDrive/Documents/CBreak/lib.cpp" "CMakeFiles/a_library.dir/lib.cpp.o" "gcc" "CMakeFiles/a_library.dir/lib.cpp.o.d"
+  "/mnt/c/Users/guddu/OneDrive/Documents/CBreak/libs/lib.cpp" "libs/CMakeFiles/a_library.dir/lib.cpp.o" "gcc" "libs/CMakeFiles/a_library.dir/lib.cpp.o.d"
   )
 
 # Targets to which this target links.

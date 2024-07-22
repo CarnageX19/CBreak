@@ -1,4 +1,6 @@
 /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/hello_world.dir
-/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/a_library.dir
 /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/edit_cache.dir
 /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/libs/CMakeFiles/a_library.dir
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/libs/CMakeFiles/edit_cache.dir
+/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/libs/CMakeFiles/rebuild_cache.dir

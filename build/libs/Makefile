@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/libs//CMakeFiles/progress.marks
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named hello_world
+# Convenience name for target.
+libs/CMakeFiles/a_library.dir/rule:
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/CMakeFiles/a_library.dir/rule
+.PHONY : libs/CMakeFiles/a_library.dir/rule
 
-# Build rule for target.
-hello_world: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hello_world
-.PHONY : hello_world
-
-# fast build rule for target.
-hello_world/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
-.PHONY : hello_world/fast
-
-#=============================================================================
-# Target rules for targets named a_library
-
-# Build rule for target.
-a_library: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a_library
+# Convenience name for target.
+a_library: libs/CMakeFiles/a_library.dir/rule
 .PHONY : a_library
 
 # fast build rule for target.
 a_library/fast:
-	$(MAKE) $(MAKESILENT) -f libs/CMakeFiles/a_library.dir/build.make libs/CMakeFiles/a_library.dir/build
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f libs/CMakeFiles/a_library.dir/build.make libs/CMakeFiles/a_library.dir/build
 .PHONY : a_library/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+lib.o: lib.cpp.o
+.PHONY : lib.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/main.cpp.o
-.PHONY : main.cpp.o
+lib.cpp.o:
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f libs/CMakeFiles/a_library.dir/build.make libs/CMakeFiles/a_library.dir/lib.cpp.o
+.PHONY : lib.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+lib.i: lib.cpp.i
+.PHONY : lib.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/main.cpp.i
-.PHONY : main.cpp.i
+lib.cpp.i:
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f libs/CMakeFiles/a_library.dir/build.make libs/CMakeFiles/a_library.dir/lib.cpp.i
+.PHONY : lib.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+lib.s: lib.cpp.s
+.PHONY : lib.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/main.cpp.s
-.PHONY : main.cpp.s
+lib.cpp.s:
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(MAKE) $(MAKESILENT) -f libs/CMakeFiles/a_library.dir/build.make libs/CMakeFiles/a_library.dir/lib.cpp.s
+.PHONY : lib.cpp.s
 
 # Help Target
 help:
@@ -175,10 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... a_library"
-	@echo "... hello_world"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... lib.o"
+	@echo "... lib.i"
+	@echo "... lib.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -27,12 +27,17 @@ print(PROJECT_NAME MYVAR ANOTHER_VARIABLE) #function call
 
 
 #add_library example
-add_library(a_library lib.cpp)
+#add_library(a_library lib.cpp) #add library moved to lib/
 #the object file/static library generated will be set as liba_library (lib followed by the library target name)
 #to make shared we can use the SHARED Flag as so, by default its static we can also explicitly make static:
 #add_library(a_library SHARED lib.cpp)
 #add_library(a_library STATIC lib.cpp)
 #to correctly add a library is to create a separate header (here "lib.hpp") and link it like so:
 
+
 target_link_libraries(${PROJECT_NAME} a_library)
 #ttarget_link_library(<target executable, which executable to link to the library> <the actual library basically the library target)
+
+
+add_subdirectory(libs)
+#sub directory for libraries

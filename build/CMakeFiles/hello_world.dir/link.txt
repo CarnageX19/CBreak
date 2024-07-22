@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/hello_world.dir/main.cpp.o -o hello_world  liba_library.a 
+/usr/bin/c++ -rdynamic CMakeFiles/hello_world.dir/main.cpp.o -o hello_world  libs/liba_library.a 
