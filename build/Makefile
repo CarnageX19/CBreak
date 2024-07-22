@@ -129,6 +129,43 @@ hello_world/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
 .PHONY : hello_world/fast
 
+#=============================================================================
+# Target rules for targets named a_library
+
+# Build rule for target.
+a_library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 a_library
+.PHONY : a_library
+
+# fast build rule for target.
+a_library/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/build
+.PHONY : a_library/fast
+
+lib.o: lib.cpp.o
+.PHONY : lib.o
+
+# target to build an object file
+lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/lib.cpp.o
+.PHONY : lib.cpp.o
+
+lib.i: lib.cpp.i
+.PHONY : lib.i
+
+# target to preprocess a source file
+lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/lib.cpp.i
+.PHONY : lib.cpp.i
+
+lib.s: lib.cpp.s
+.PHONY : lib.s
+
+# target to generate assembly for a file
+lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/lib.cpp.s
+.PHONY : lib.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -161,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... a_library"
 	@echo "... hello_world"
+	@echo "... lib.o"
+	@echo "... lib.i"
+	@echo "... lib.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

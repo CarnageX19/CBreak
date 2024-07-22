@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build
 
 # The main recursive "all" target.
 all: CMakeFiles/hello_world.dir/all
+all: CMakeFiles/a_library.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,21 +73,22 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/hello_world.dir/clean
+clean: CMakeFiles/a_library.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hello_world.dir
 
 # All Build rule for target.
-CMakeFiles/hello_world.dir/all:
+CMakeFiles/hello_world.dir/all: CMakeFiles/a_library.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles --progress-num=1,2 "Built target hello_world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles --progress-num=3,4 "Built target hello_world"
 .PHONY : CMakeFiles/hello_world.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hello_world.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hello_world.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 0
 .PHONY : CMakeFiles/hello_world.dir/rule
@@ -99,6 +101,32 @@ hello_world: CMakeFiles/hello_world.dir/rule
 CMakeFiles/hello_world.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/clean
 .PHONY : CMakeFiles/hello_world.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/a_library.dir
+
+# All Build rule for target.
+CMakeFiles/a_library.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles --progress-num=1,2 "Built target a_library"
+.PHONY : CMakeFiles/a_library.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/a_library.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a_library.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/guddu/OneDrive/Documents/CBreak/build/CMakeFiles 0
+.PHONY : CMakeFiles/a_library.dir/rule
+
+# Convenience name for target.
+a_library: CMakeFiles/a_library.dir/rule
+.PHONY : a_library
+
+# clean rule for target.
+CMakeFiles/a_library.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/a_library.dir/build.make CMakeFiles/a_library.dir/clean
+.PHONY : CMakeFiles/a_library.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
